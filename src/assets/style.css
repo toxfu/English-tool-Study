@@ -1,0 +1,64 @@
+.stForm{
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.stFormSubmitButton, .stButton{
+    /*center*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stFormSubmitButton, .stButton button{
+    box-shadow: 0 0 5px rgb(130, 130, 130);
+}
+
+.stSlider{
+    box-shadow: 0 0 5px rgb(130, 130, 130);
+    border-radius: 15px;
+    background-color: rgb(24, 28, 39);
+    padding: 10px;
+}
+
+h3{
+    text-align: center;
+}
+
+.st-key-delete_db button{
+    background-color: rgb(255, 57, 57);
+    color: white;
+}
+
+.st-emotion-cache-janbn0 {
+    background-color: rgb(54, 58, 73);
+    /*align right*/
+    text-align: right;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+}
+
+.st-emotion-cache-janbn0  p {
+    color: rgb(163, 168, 184);
+}
+
+div[data-baseweb="tab-list"] p {
+    /*hacer un estilo de boton elegante y aumentar el tamaño de la fuente*/
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(54, 58, 73);
+    
+}
+
+div[data-baseweb="tab-list"] button {
+    background-color: #e0e4ec;                /* color suave azulado */
+    padding: 8px 12px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgb(163, 168, 184); /* sombra inferior derecha */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+div[data-baseweb="tab-list"] button:hover { 
+    transform: translateY(-1px);              /* pequeño levantamiento al hacer hover */
+}
