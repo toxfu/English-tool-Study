@@ -4,7 +4,8 @@ Aplicación de estudio de inglés con Streamlit, usando FSRS para repetición es
 
 La asistencia con IA ayuda a generar ejemplos con las palabras y frases que hayas agregado, según un tema que elijas. El fin de esta generación es evitar la memorización mecánica y fomentar el aprendizaje contextual. También cuenta con un chat libre para practicar conversaciones en inglés.
 
-![Example](./media/english study demo.mp4)
+<a href="./media/english%20study%20demo.mp4">Ver video de demostración</a>
+
 
 ## 🚀 Inicio Rápido con Docker
 
