@@ -19,7 +19,7 @@ COPY pyproject.toml .
 RUN pip install --no-cache-dir uv
 
 # Instala las dependencias del proyecto
-RUN uv pip install --system -r pyproject.toml
+RUN uv pip install --system .
 
 # Descarga el modelo de spaCy (ajusta según el modelo que uses)
 RUN python -m spacy download en_core_web_sm
@@ -31,7 +31,14 @@ COPY src/ ./src/
 EXPOSE 8501
 
 # Agrega src al PYTHONPATH
-ENV PYTHONPATH="${PYTHONPATH}:/app/src"
+ENV PYTHONPATH="/app/src" \
+    STREAMLIT_SERVER_PORT=8501 \
+    STREAMLIT_SERVER_ADDRESS=0.0.0.0 \
+    STREAMLIT_SERVER_HEADLESS=true
+
+EXPOSE 8501
+
+HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
 # Comando para ejecutar la aplicación
 CMD ["streamlit", "run", "src/gui.py"]
